@@ -1,6 +1,6 @@
 {
   "name": "bornlogic-react-components",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Bornlogic's components library",
   "main": "build/index.js",
   "scripts": {
@@ -37,5 +37,9 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-watch": "^6.0.0",
     "polished": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:diegojacomel/bornlogic-react-components.git"
   }
 }

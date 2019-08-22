@@ -349,3 +349,55 @@ type: any
 The "onClick" attribute call a method to do something.
 
 type: function
+
+---
+
+
+# Radio
+
+### Basic usage
+
+```js
+<Radio
+    name="radioName"
+    id={2}
+    onClick={() => {}}
+    text="Sim"
+/>
+<Radio
+    name="radioName"
+    id={3}
+    onClick={() => {}}
+    text="Não"
+/>
+```
+
+#### **id**
+
+The "id" define the field id.
+
+type: any
+
+#### **value**
+
+The "value" define the field value.
+
+type: boolean
+
+#### **name**
+
+The "name" define the field name.
+
+type: string
+
+#### **text**
+
+The "text" define the field label.
+
+type: string
+
+#### **onClick**
+
+The "onClick" attribute call a method to do something.
+
+type: function

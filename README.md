@@ -1,68 +1,351 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## bornlogic-react-components
 
-## Available Scripts
+Bornlogic react components library.
 
-In the project directory, you can run:
+## How can I install the library?
 
-### `npm start`
+#### Using npm
+```
+npm install bornlogic-react-components
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Using yarn
+```
+yarn add bornlogic-react-components
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## How can I import the components?
 
-### `npm test`
+```
+import { Button } from 'bornlogic-react-components';
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Components
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Container
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Basic usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+<Container
+    maxWidth="90%"
+    // noLeft
+>
+    Container
+</Container>
+```
 
-### `npm run eject`
+### Props
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### **maxWidth**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The "maxWidth" define the maximum width.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+type: string
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### **noLeft**
 
-## Learn More
+The "noLeft" remove left padding.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+type: boolean
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Button
 
-### Analyzing the Bundle Size
+### Basic usage
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```js
+<Button>Click here</Button>
+```
 
-### Making a Progressive Web App
+### Props
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### **type**
 
-### Advanced Configuration
+The type attribute specifies the type of button.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+type: string
 
-### Deployment
+#### **color**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+It define the button color.
 
-### `npm run build` fails to minify
+type: string
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- primary
+- danger
+- success
+- default
+
+```js
+<div>
+    <Button color="primary">primary</Button>
+    <Button color="danger">danger</Button>
+    <Button color="success">success</Button>
+    <Button color="default">default</Button>
+</div>
+```
+
+#### **outline**
+
+It define if the button is outline or filled.
+
+type: bool
+
+```js
+<div>
+    <Button color="primary" outline>primary</Button>
+    <Button color="danger" outline>danger</Button>
+    <Button color="success" outline>success</Button>
+    <Button color="default" outline>default</Button>
+</div>
+```
+
+#### **size**
+
+It define the button size.
+
+type: string
+
+- xg
+- lg
+- md
+- sm
+- xs
+
+```js
+<div>
+    <Button color="primary" size="xg">Button XG</Button>
+    <Button color="primary" size="lg">Button LG</Button>
+    <Button color="primary" size="md">Button MD</Button>
+    <Button color="primary" size="sm">Button SM</Button>
+    <Button color="primary" size="xs">Button XS</Button>
+</div>
+```
+
+#### **rounded**
+
+It define the button rounded size.
+
+type: string
+
+- none
+- sm
+- md
+- lg
+- full
+
+```js
+<Button color="primary" rounded="lg">Button Rounded</Button>
+```
+
+#### **block**
+
+Let the button with full width display.
+
+type: bool
+
+```js
+<Button color="primary" block>Button Block</Button>
+```
+
+#### **icon**
+
+If you to wish putting a icon on button.
+
+type: string
+
+P.S.: To more information, you should find the Icon component on styleguide sidebar.
+
+```js
+<Button color="primary" icon="arrow-right2" iconSize="md" iconColor="white">
+    Button Icon
+</Button>
+```
+
+#### **iconSize**
+
+It define the icon size.
+
+type: string
+
+- xxs
+- xs
+- xsm
+- sm
+- md
+- lg
+- xlg
+- xg
+- xxg
+
+#### **iconColor**
+
+It define the button color.
+
+type: string
+
+- primary
+- danger
+- success
+- default
+
+#### **iconLeft**
+
+It should be used when you want reverse the icon side.
+
+type: bool
+
+#### **onClick**
+
+It should be used to fire any method that you want.
+
+type: function
+
+
+---
+
+
+# Title
+
+### Basic usage
+
+```js
+<Title tag='h2' color='primary' fontWeight='bold' marginBottom='md' separator>Title</Title>
+```
+
+### Props
+
+#### **tag**
+
+Tag indicate which Heading Tags must be used.
+
+type: string
+
+- h1
+- h2
+- h3
+- h4
+- h5
+- h6
+
+```js
+<div>
+    <Title tag='h1'>H1</Title>
+    <Title tag='h2'>H2</Title>
+    <Title tag='h3'>H3</Title>
+    <Title tag='h4'>H4</Title>
+    <Title tag='h5'>H5</Title>
+    <Title tag='h6'>H6</Title>
+</div>
+```
+
+### **color**
+
+Color refers to the colors specified in Themes.js file
+
+type: string
+
+- primary
+- blueLight
+- blueDark
+- ...
+
+
+```js
+<div>
+    <Title color='primary'>Primary</Title>
+    <Title color='blueLight'>BlueLight</Title>
+    <Title color='blueDark'>BlueDark</Title>
+</div>
+```
+
+### **fontWeight**
+
+fontWeight refers to the fontWeight specified in Themes.js file
+
+type: string
+
+- ultraLight
+- light
+- normal
+- bold
+
+```js
+<div>
+    <Title fontWeight='ultraLight'>UltraLight</Title>
+    <Title fontWeight='light'>Light</Title>
+    <Title fontWeight='normal'>Normal</Title>
+    <Title fontWeight='bold'>Bold</Title>
+</div>
+```
+
+
+### **marginBottom**
+
+marginBottom refers to the Spacing specified in Themes.js file
+
+type: string
+
+- xxs
+- md
+- xg
+
+```js
+<div>
+    <Title marginBottom='xxs'>Text 1</Title>
+    <Title marginBottom='md'>Text 2</Title>
+    <Title marginBottom='xg'>Text 3</Title>
+</div>
+```
+
+### **separator**
+
+separator adds a line on the right side of the title until the end of the div
+
+type: bool
+
+```js
+<div>
+    <Title separator>Text With Separator</Title>
+</div>
+```
+
+
+---
+
+
+# Checkbox
+
+### Basic usage
+
+```js
+<Checkbox
+    name="name"
+    id={1}
+    onClick={() => {}}
+/>
+```
+
+### Props
+
+#### **name**
+
+The "name" define the field name.
+
+type: string
+
+#### **id**
+
+The "id" define the field id.
+
+type: any
+
+#### **onClick**
+
+The "onClick" attribute call a method to do something.
+
+type: function

@@ -401,3 +401,76 @@ type: string
 The "onClick" attribute call a method to do something.
 
 type: function
+
+---
+
+
+# Select
+
+### Basic usage
+
+```js
+<Select
+    name="selectName"
+    id={2}
+    onChange={(e) => alert(`Você selecionou a opção: ${e.target.value}.`)}
+    text="Sim"
+>
+    <option value="Nenhuma opção">Selecione uma opção</option>
+    <option value="1">Opção 1</option>
+    <option value="2">Opção 2</option>
+    <option value="3">Opção 3</option>
+    <option value="4">Opção 4</option>
+    <option value="5">Opção 5</option>
+</Select>
+```
+
+#### **selectValue**
+
+The "selectValue" define the field value.
+
+type: any
+
+#### **withoutBorder**
+
+The "withoutBorder" define if field hide the border.
+
+type: boolean
+
+#### **withBorder**
+
+The "withBorder" define if field show the border.
+
+type: boolean
+
+#### **disabled**
+
+The "disabled" define if field is disabled.
+
+type: boolean
+
+#### **size**
+
+The "size" define the select size.
+
+type: string
+
+**Options:**
+
+- sm
+
+#### **defaultValue**
+
+The "defaultValue" define the initial value selected.
+
+type: string
+
+#### **onChange**
+
+The "onChange" attribute call a method to do something.
+
+type: function
+
+---
+
+

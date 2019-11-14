@@ -1,6 +1,6 @@
 {
   "name": "bornlogic-react-components",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Bornlogic's components library",
   "main": "build/index.js",
   "scripts": {
